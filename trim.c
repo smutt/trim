@@ -14,7 +14,7 @@ void usage(){
 }
 
 char *ltrim(char *dest, const char *c){
-  if(! (strlen(dest) && strlen(c))) return dest;
+  if(! (dest && strlen(dest) && c && strlen(c))) return dest;
   int cPos = 0;
 
   do{
@@ -30,7 +30,7 @@ char *ltrim(char *dest, const char *c){
 }
 
 char *rtrim(char *dest, const char *c){
-  if(! (strlen(dest) && strlen(c))) return dest;
+  if(! (dest && strlen(dest) && c && strlen(c))) return dest;
   int cPos = 0;
 
   do{
